@@ -1,6 +1,7 @@
 body {
 	margin: 0;
 	padding: 0;
+	color: #333;
 }
 
 /* Header */
@@ -17,12 +18,19 @@ body {
 #navigation {
 	float: right;
 }
+#navigation a{
+	color: #333;
+	text-decoration: none;
+	margin: 0 0 0 2vw;
+}
 
 /* Content */
 #main_content {	
 	width: 95%;
 	margin: 0 auto;
 }
+
+/* Index */
 .grid_item {
 	margin: 0 2.665% 5% 2.665%;
 	width: 28%;
@@ -33,6 +41,32 @@ body {
 }
 .grid_item p{
 	text-align: center;
+}
+
+/* Project */
+.project_container {
+	width: 94.835%;
+	margin: 0 auto;
+}
+#project {
+	padding: 0 0 15vh 0;
+	margin: 0 0 5vh 0;
+	border-bottom: 1px solid #ccc;
+}
+.project_container img{
+	width: 100%;
+	margin: 0 0 10vh 0;
+}
+.project_title {
+	display: inline-block;
+	vertical-align: top;
+	width: 40%;
+}
+.project_description {
+	display: inline-block;
+	vertical-align: top;
+	width: 40%;
+	margin: 0 0 20vh 0;
 }
 
 /* Positioning */
