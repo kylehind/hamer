@@ -45,7 +45,7 @@ body {
 
 /* Project */
 .project_container {
-	width: 94.835%;
+	width: 95%;
 	margin: 0 auto;
 }
 #project {
@@ -67,6 +67,21 @@ body {
 	vertical-align: top;
 	width: 40%;
 	margin: 0 0 20vh 0;
+}
+
+/* Contact */
+.contact_container {
+	display: none;
+	width: 95%;
+	margin: 0 auto;
+	padding: 10vh 0;
+	border-top: 1px #ccc solid;
+	border-bottom: 1px #ccc solid;
+}
+.contact_container a{
+	display: block;
+	text-decoration: none;
+	color: #333;
 }
 
 /* Positioning */
