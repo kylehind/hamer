@@ -1,0 +1,44 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+/* Header */
+#header {
+	width: 89.67%;
+	margin: 0 auto;
+	padding: 8vh 0 0 0;
+	text-transform: uppercase;
+	height:17vh;
+}
+#branding {
+	float: left;
+}
+#navigation {
+	float: right;
+}
+
+/* Content */
+#main_content {	
+	width: 95%;
+	margin: 0 auto;
+}
+.grid_item {
+	margin: 0 2.665% 5% 2.665%;
+	width: 28%;
+	height:auto;
+}
+.grid_item img{
+	width:100%;
+}
+.grid_item p{
+	text-align: center;
+}
+
+/* Positioning */
+.float_left{
+	float: left;
+}
+.clear {
+	clear: both;
+}
