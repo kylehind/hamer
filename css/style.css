@@ -15,6 +15,9 @@ body {
 #branding {
 	float: left;
 }
+#branding:hover {
+	cursor: pointer;
+}
 #navigation {
 	float: right;
 }
@@ -35,6 +38,9 @@ body {
 	margin: 0 2.665% 5% 2.665%;
 	width: 28%;
 	height:auto;
+}
+.grid_item:hover {
+	cursor: pointer;
 }
 .grid_item img{
 	width:100%;
