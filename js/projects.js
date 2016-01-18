@@ -41,7 +41,7 @@ $(document).ready(function(){
 		$("html, body").animate({ scrollTop: 0 }, "slow");
 		var project_id = $(this).attr("project_id");
 		var project = projects[project_id];
-		$(".project_container").html("<div id='project'><div class='project_title'><p><b>"+project.title+"</b></p></div><div class='project_description'><p>"+ project.description +"</p></div></div>");
+		$("#project_container").html("<div id='project'><div class='project_title'><p><b>"+project.title+"</b></p></div><div class='project_description'><p>"+ project.description +"</p></div></div>");
 		_.each(project.images, function(image){
 			$("#project").append("<img src=" + image + ">")
 		});
@@ -49,19 +49,5 @@ $(document).ready(function(){
 		var grid = $('.grid').masonry({
 	  itemSelector: '.grid_item',
 	  transitionDuration: 0
-	});	
-
-	$("#portfolio_link, #branding").click(function(){
-		$(".grid").show();
-		$(".project_container").html("");
-		$(".contact_container").hide();
-		$("html, body").animate({ scrollTop: 0 }, "slow");
-	});
-
-	$("#contact_link").click(function(){
-		$(".contact_container").show();
-		$(".project_container").html("");
-		$(".grid").hide();
-		$("html, body").animate({ scrollTop: 0 }, "slow");
 	});
 });

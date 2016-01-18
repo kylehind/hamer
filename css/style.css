@@ -50,7 +50,7 @@ body {
 }
 
 /* Project */
-.project_container {
+#project_container {
 	width: 95%;
 	margin: 0 auto;
 }
@@ -59,7 +59,7 @@ body {
 	margin: 0 0 5vh 0;
 	border-bottom: 1px solid #ccc;
 }
-.project_container img{
+#project_container img{
 	width: 100%;
 	margin: 0 0 10vh 0;
 }
@@ -76,7 +76,7 @@ body {
 }
 
 /* Contact */
-.contact_container {
+#contact_container {
 	display: none;
 	width: 95%;
 	margin: 0 auto;
@@ -84,10 +84,30 @@ body {
 	border-top: 1px #ccc solid;
 	border-bottom: 1px #ccc solid;
 }
-.contact_container a{
+#contact_container a{
 	display: block;
 	text-decoration: none;
 	color: #333;
+}
+
+/* Blog */
+#blog_container {
+	width: 95%;
+	margin: 0 auto;
+}
+.blog_left {
+	width: 30%;
+	display: inline-block;
+	vertical-align: top;
+}
+.blog_right {
+	margin: 0 0 0 5%;
+	width: 65%;
+	display: inline-block;
+	vertical-align: top;
+}
+.blog_right img{
+	width: 100%;
 }
 
 /* Positioning */

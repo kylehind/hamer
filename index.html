@@ -10,21 +10,23 @@
 	<script src="js/masonry.pkgd.min.js"></script>
 	<script src="js/underscore-min.js"></script>
 	<script src="js/projects.js"></script>
+	<script src="js/blog.js"></script>
+	<script src="js/navigation.js"></script>
 	<body>
 		<div id="main_container">
 			<div id="header">
 				<div id="branding">
-					Stephanie Hamer
+					<a id="header_link" href="#portfolio">Stephanie Hamer</a>
 				</div>
 				<div id="navigation">
-					<a id="portfolio_link" href="#">Portfolio</a>
-					<a id="contact_link" href="#">Contact</a>
-					<a href="#">Blog</a>
+					<a id="portfolio_link" href="#portfolio">Portfolio</a>
+					<a id="contact_link" href="#contact">Contact</a>
+					<a id="blog_link" href="#blog">Blog</a>
 				</div>
 				<div class="clear"></div>
 			</div>
 			<div id="main_content">
-				<div class="contact_container">
+				<div id="contact_container">
 					<p>
 						Graduated from University of Central Lancashire in 2014.<br>
 						Currently working as a graphic designer in Manchester, UK.<br>
@@ -35,8 +37,11 @@
 					<a href="#">Behance</a>
 					<a href="https://www.instagram.com/steph_hamer/" target="_blank">Instagram</a>
 				</div>
-				<div class="project_container"></div>
-				<div class="grid"></div>
+				<div id="blog_container"></div>
+				<div id="project_container"></div>
+				<div id="portfolio_container">
+					<div class="grid"></div>
+				</div>
 				<div class="clear"><div>
 			</div>
 		</div>		
