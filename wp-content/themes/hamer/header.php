@@ -64,11 +64,30 @@ echo ' | ' . sprintf( __( 'Page %s', 'shape' ), max( $paged, $page ) );
         <?php endif; ?>
       </a>
     </div>
-
+    <div id="navigation-menu-icon"><img src='<?php echo get_template_directory_uri() ?>/img/menu.png'></div>
+    <div class="mobile_clear"></div>
     <nav id="navigation" class="site-navigation main-navigation">
-      <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu', 'menu_id' => 'primary-menu' ) ); ?>
+      <ul>
+        <?php if ( is_active_sidebar("contact") ) : ?>
+          <li><a id="contact_link" href="#">Contact</a></li>
+        <?php endif; ?>
+        <?php
+          $args=array(
+            'category_name' => 'blog',
+            'post_status' => 'publish'
+          );
+          $hasposts = get_posts($args);
+          if ( $hasposts ) : ?>
+          <li><a href="/category/blog/">Blog</a></li>
+        <?php endif; ?>
+        <?php wp_nav_menu( array( 'items_wrap' => '<span id="%1$s" class="%2$s">%3$s</span>', 'container' => '', 'theme_location' => 'primary' ) ); ?>
+      </ul>
     </nav><!-- .site-navigation .main-navigation -->
     <div class="clear"></div>
   </header><!-- #masthead .site-header -->
+  <div class="clear"></div>
 
   <div id="main" class="site-main">
+    <div id="primary" class="content-area">
+      <?php get_template_part('contact'); ?>
+      <div class="clear"></div>

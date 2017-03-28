@@ -8,15 +8,15 @@
 * @since hamer 1.0
 */
 ?>
+        </div><!-- #primary .content-area -->
+      </div><!-- #main .site-main -->
 
-</div><!-- #main .site-main -->
+    <footer id="colophon" class="site-footer" role="contentinfo">
 
-<footer id="colophon" class="site-footer" role="contentinfo">
+    </footer><!-- #colophon .site-footer -->
+  </div><!-- #page .hfeed .site -->
 
-</footer><!-- #colophon .site-footer -->
-</div><!-- #page .hfeed .site -->
+  <?php wp_footer(); ?>
 
-<?php wp_footer(); ?>
-
-</body>
+  </body>
 </html>

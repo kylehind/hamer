@@ -9,9 +9,9 @@
   <div class="entry-content">
     <h1 class="entry-title">
       <?php the_title(); ?>
+      <span class="info-link">info</span>
     </h1>
     <?php the_content(); ?>
-    <?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'hamer' ), 'after' => '</div>' ) ); ?>
-    <div class="clear">
+    <div class="clear"></div>
   </div><!-- .entry-content -->
 </article><!-- #post-<?php the_ID(); ?> -->

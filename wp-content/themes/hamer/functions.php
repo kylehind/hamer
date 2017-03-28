@@ -69,6 +69,9 @@ function hamer_scripts() {
     wp_enqueue_style( 'style', get_stylesheet_uri() );
     wp_enqueue_script( 'masonry', get_template_directory_uri() . '/js/masonry.pkgd.min.js', array( 'jquery' ), '20160620' );
     wp_enqueue_script( 'load-masonry', get_template_directory_uri() . '/js/load-masonry.js', array( 'jquery' ), '20160620' );
+    wp_enqueue_script( 'clear-fix', get_template_directory_uri() . '/js/clear-fix.js', array( 'jquery' ), '20160620' );
+    wp_enqueue_script( 'mobile-menu', get_template_directory_uri() . '/js/mobile-menu.js', array( 'jquery' ), '20160620' );
+    wp_enqueue_script( 'load-contact', get_template_directory_uri() . '/js/load-contact.js', array( 'jquery' ), '20160620' );
 
     if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
         wp_enqueue_script( 'comment-reply' );
@@ -87,21 +90,10 @@ add_action( 'wp_enqueue_scripts', 'hamer_scripts' );
  */
 function hamer_widgets_init() {
     register_sidebar( array(
-        'name' => __( 'Primary Widget Area', 'hamer' ),
-        'id' => 'sidebar-1',
+        'name' => __( 'Contact', 'hamer' ),
+        'id' => 'contact',
         'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-        'after_widget' => '</aside>',
-        'before_title' => '<h1 class="widget-title">',
-        'after_title' => '</h1>',
-    ) );
-
-    register_sidebar( array(
-        'name' => __( 'Secondary Widget Area', 'hamer' ),
-        'id' => 'sidebar-2',
-        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-        'after_widget' => '</aside>',
-        'before_title' => '<h1 class="widget-title">',
-        'after_title' => '</h1>',
+        'after_widget' => '</aside>'
     ) );
 }
 add_action( 'widgets_init', 'hamer_widgets_init' );
@@ -117,6 +109,7 @@ add_action( 'widgets_init', 'hamer_widgets_init' );
  * Hooks into the after_setup_theme action.
  *
  */
+
 function hamer_register_custom_background() {
     $args = array(
         'default-color' => 'e9e0d1',
@@ -140,6 +133,32 @@ add_theme_support( 'post-thumbnails' );
  * Implement the Custom Header feature
  */
 require( get_template_directory() . '/inc/custom-header.php' );
+/**
+ * Set up categories used for portfolio and blog sections
+ */
+function insert_category_portfolio() {
+  wp_insert_term(
+    'Portfolio',
+    'category',
+    array(
+      'description' => 'These are posts that will be found on the "Portfolio" section on the site.',
+      'slug'    => 'portfolio'
+    )
+  );
+}
+add_action( 'after_setup_theme', 'insert_category_portfolio' );
+
+function insert_category_blog() {
+  wp_insert_term(
+    'Blog',
+    'category',
+    array(
+      'description' => 'These are posts that will be found on the "blog" section on the site.',
+      'slug'    => 'blog'
+    )
+  );
+}
+add_action( 'after_setup_theme', 'insert_category_blog' );
 
 /* Meta box setup function. */
 function hamer_post_meta_boxes_setup() {
